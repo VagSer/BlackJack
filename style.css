@@ -1,0 +1,54 @@
+body {
+   background: linear-gradient(90deg, rgb(36, 223, 189), rgb(13, 87, 221));
+}
+
+.player__action {
+   border: 1px solid black;
+   width: min(90%, 500px);
+   margin: 10px auto;
+   padding: 10px;
+   background-color: white;
+}
+
+.buttonsSection {
+   display: flex;
+   width: min(90%, 400px);
+   justify-content: space-between;
+   margin: auto;
+}
+
+.player {
+   border: 1px solid black;
+   width: min(90%, 500px);
+   margin: 10px auto;
+   padding: 0 10px;
+   background-color: white;
+}
+
+.buttonsSection__button{
+   background-color: lightblue;
+   border: 1px solid black;
+   border-radius: 3px;
+   height: 2rem;
+}
+
+.buttonsSection__button:hover{
+   background-color: rgb(0, 0, 201);
+   color: white;
+}
+
+.hide{
+   display: none;
+}
+
+.♠,
+.♣ {
+   font-family: 'Courier New', Courier, monospace;
+   color: black;
+}
+
+.♥,
+.♦ {
+   font-family: 'Courier New', Courier, monospace;
+   color: red
+}
