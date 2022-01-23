@@ -108,7 +108,7 @@ function createNewPlayer() {
 createNewPlayer()
 
 function startGame() {
-   if ((players.length > 1) & (players.length > 6)){
+   if ((players.length > 1) && (players.length < 5)){
       if (document.querySelector('.startSets').classList.contains('hide') !== true) {
          (document.querySelector('.startSets').classList.add('hide'))
       }
