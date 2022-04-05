@@ -1,4 +1,15 @@
 let cards = []
+
+const createNewCard = (face, mark, points) => 
+{
+   let newCard = {
+      face: face,
+      mark: mark,
+      points: points,
+   }
+   cards.push(newCard)
+}
+
 for (let j = 0; j <= 3; j++) {
    let mark
 switch (j) {
@@ -15,9 +26,9 @@ switch (j) {
    createNewCard('K', mark, 10)
    createNewCard('A', mark, 11)
 }
+
 const startCards = cards.slice()
 let players=[]
-let playerActive = 1
 
 class Player{
    constructor(name) {
@@ -77,15 +88,6 @@ class Player{
       }
 
    }
-}
-
-function createNewCard(face, mark, points) {
-   let newCard = {
-      face: face,
-      mark: mark,
-      points: points,
-   }
-   cards.push(newCard)
 }
 
 function createNewPlayer() {
@@ -167,7 +169,7 @@ function finishGame() {
 
 function restartGame() {
    cards = Array.from(startCards)
-   for (let i = 0; i < players.length; i++) {
+   for (let i = players.length - 1; i >= 0; i--) {
       players[i].cards = ''
       players[i].points = 0
       players[i].haveAce = false
