@@ -3,9 +3,9 @@ let cards = []
 const createNewCard = (face, mark, points) => 
 {
    let newCard = {
-      face: face,
-      mark: mark,
-      points: points,
+      face,
+      mark,
+      points,
    }
    cards.push(newCard)
 }
@@ -28,6 +28,7 @@ switch (j) {
 }
 
 const startCards = cards.slice()
+
 let players=[]
 
 class Player{
@@ -38,6 +39,7 @@ class Player{
       this.points = 0
       this.haveAce = false
       this.recount = false
+      this.money = (players.length === 0)? 99999: 500
    }
    getCard() {
       let newCard
@@ -100,6 +102,7 @@ function createNewPlayer() {
       playerList.innerHTML =
       `<p class="player__name">Игрок: ${newPlayer.name}</p>
       <p class="player__cards">Карты в руках: </p>
+      <p class="player__money">Деньги: ${newPlayer.money}</p>
       <p class="player__points">Счёт: </p>`
       document.querySelector(".player__list").appendChild(playerList)
 
